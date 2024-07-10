@@ -1,0 +1,31 @@
+{
+  "name": "wefood",
+  "version": "1.0.0",
+  "description": "this is a food ordering website",
+  "scripts": {
+    "test": "jest",
+    "start": "npx parcel index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shyamg090/Wefood.git"
+  },
+  "author": "Shyamgbhat",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shyamg090/Wefood/issues"
+  },
+  "homepage": "https://github.com/shyamg090/Wefood#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.19",
+    "parcel": "^2.12.0",
+    "postcss": "^8.4.39",
+    "process": "^0.11.10",
+    "tailwindcss": "^3.4.4"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-icons": "^5.2.1"
+  }
+}
