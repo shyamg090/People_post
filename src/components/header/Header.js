@@ -1,6 +1,8 @@
 import React from 'react'
 import { FaShoppingCart } from "react-icons/fa"
 import { FaUser } from "react-icons/fa";
+import { FaHome } from "react-icons/fa";
+
 
 const Header = () => {
   return (
