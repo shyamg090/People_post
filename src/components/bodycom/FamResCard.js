@@ -1,9 +1,9 @@
 import React from 'react'
 import { IoIosStar } from "react-icons/io";
 
-import { SEARCH_BG_IMG } from '../utils/constant';
+import { SEARCH_BG_IMG } from '../../utils/constant';
 
-const ResCard = ({resname, rating, time, cusine}) => {
+const FamResCard = ({resname, rating, time, cusine}) => {
   return (
     <div className='flex flex-col items-center min-w-[18rem] font-mono gap-3 p-2 m-2 rounded-xl hover:scale-[10px]' >
       <img className='rounded-lg w-full h-[15rem]' src={SEARCH_BG_IMG} alt='foodpartner' ></img>
@@ -18,4 +18,4 @@ const ResCard = ({resname, rating, time, cusine}) => {
   )
 }
 
-export default ResCard
+export default FamResCard;
