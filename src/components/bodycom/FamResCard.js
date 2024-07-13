@@ -3,17 +3,26 @@ import { IoIosStar } from "react-icons/io";
 
 import { SEARCH_BG_IMG } from '../../utils/constant';
 
-const FamResCard = ({resname, rating, time, cusine}) => {
+const FamResCard = ({ resChain }) => {
+
+  // console.log(resChain);
+
+  const image = SEARCH_BG_IMG + resChain?.cloudinaryImageId;
+
   return (
-    <div className='flex flex-col items-center min-w-[18rem] font-mono gap-3 p-2 m-2 rounded-xl hover:scale-[10px]' >
-      <img className='rounded-lg w-full h-[15rem]' src={SEARCH_BG_IMG} alt='foodpartner' ></img>
-      <h1 className='w-full text-[1.5rem] '>{resname}</h1>
-      <div className='w-full flex justify-start items-start gap-10'>
-        <h3 className='flex tems-center justify-center gap-2' ><IoIosStar className='w-5 h-5'/> {rating}  </h3>
-        <h4>{time}</h4>
+    <div className='flex flex-col items-center justify-evenly min-w-[18rem] h-[21rem] font-mono gap-3 p-2 rounded-xl hover:scale-95 shadow-xl'  >
+      <div className='rounded-lg w-full h-[12rem]  bg-cover bg-center' style={{ backgroundImage: `url("${image}")` }} >
+        <div className='w-full h-full flex items-end bg-gradient-to-t from-black to-transparent rounded-lg'>
+          <h1 className='m-3 w-full text-[1rem] font-mono text-white'>{ resChain?.aggregatedDiscountInfoV3 ?  resChain?.aggregatedDiscountInfoV3?.header + " " + resChain?.aggregatedDiscountInfoV3?.subHeader : " " }</h1>
+        </div>
       </div>
-      <h3 className='text-[1rem] w-full'>00 for 2</h3>
-      <h4 className='text-[1rem] w-full'>{cusine} </h4>
+      <h1 className='w-full text-[18px] text-tight font-serif font-extrabold leading-3'>{resChain?.name.slice(0, 30)}</h1>
+      <h4 className='text-[.8rem] w-full'>{resChain?.cuisines.slice(0, 3).join(", ")} </h4>
+      <div className='w-full flex justify-evenly items-center '>
+        <h3 className='flex items-center justify-center text-[14px] gap-1 rounded-[10px] bg-[#f8c78c] text-brown p-2' > {resChain?.avgRating.toString()} <IoIosStar className='w-3 h-4' /> </h3>
+        <h4 className='flex items-center justify-center text-[14px] gap-1 rounded-[10px] bg-[#f8c78c] text-brown p-2'>{resChain?.sla?.deliveryTime} min</h4>
+        <h3 className=' flex items-center justify-center text-[14px] gap-1 rounded-[10px] bg-[#f8c78c] text-brown p-2 font-extrabold'>{resChain?.costForTwo}</h3>
+      </div>
     </div>
   )
 }
