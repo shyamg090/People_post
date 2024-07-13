@@ -9,7 +9,8 @@ const Allrestaurants = () => {
     const [famousChain, setFamouschain] = useState([])
     const [prevdata , setPrevdata] = useState([]);
 
-    const [filterapplied, setfilterapplied] = useState(false);
+    const [filterapplied1, setfilterapplied1] = useState(false);
+    const [filterapplied2, setfilterapplied2] = useState(false);
 
 
     useEffect(() => {
@@ -25,22 +26,43 @@ const Allrestaurants = () => {
         const data = json1?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
 
         setFamouschain(data);
-        setPrevdata(data);
+        // setPrevdata(data);
     }
 
     const Fourstar = () => {
+
+        setPrevdata(famousChain);
 
         const filter4rating = famousChain.filter((item) => {
             // console.log(item.info.avgRating);
             return item.info.avgRating >= 4.7
         })
-        setfilterapplied(!filterapplied);
+
+        setfilterapplied1(!filterapplied1);
 
         return setFamouschain(filter4rating);
+
     }
 
-    const removeFilter = () => {
-        setfilterapplied(!filterapplied);
+    const Pureveg = () => {
+        setPrevdata(famousChain);
+
+        const filterVeg = famousChain.filter((item) => {
+            // console.log(item.info.avgRating);
+            return item.info.badges?.imageBadges[0]?.description == "pureveg"
+        })
+        setfilterapplied2(!filterapplied2);
+
+        return setFamouschain(filterVeg);
+    }
+
+    const removeFilter1 = () => {
+        setfilterapplied1(!filterapplied1);
+        setFamouschain(prevdata);
+    }
+
+    const removeFilter2 = () => {
+        setfilterapplied2(!filterapplied2);
         setFamouschain(prevdata);
     }
 
@@ -51,10 +73,16 @@ const Allrestaurants = () => {
                 <h4 className='flex items-center justify-center text-[14px] gap-1 rounded-[10px] bg-[#f8c78c] text-brown p-2'><FaLeaf /> Pure Veg</h4>
                 <h3 className=' flex items-center justify-center text-[14px] gap-1 rounded-[10px] bg-[#f8c78c] text-brown p-2 tracking-tight'>Rs. 300 - Rs. 600</h3>
 
-                {filterapplied ? <h3 className=' flex items-center justify-center text-[14px] gap-1 rounded-[10px] bg-yellow-950 text-[#f8c78c] p-2 ' onClick={() => removeFilter()}><FaStar /> 4.0+  <IoIosClose className='w-3 h-3' /></h3>
+                {filterapplied1 ? <h3 className=' flex items-center justify-center text-[14px] gap-1 rounded-[10px] bg-yellow-950 text-[#f8c78c] p-2 ' onClick={() => removeFilter1()}><FaStar /> 4.0+  <IoIosClose className='w-3 h-3' /></h3>
                     :
                     <h3 className=' flex items-center justify-center text-[14px] gap-1 rounded-[10px] bg-[#f8c78c] text-brown p-2 ' onClick={() => Fourstar()}><FaStar />4.0+</h3>
                 }
+
+{/* 
+                {filterapplied2 ? <h3 className=' flex items-center justify-center text-[14px] gap-1 rounded-[10px] bg-yellow-950 text-[#f8c78c] p-2 ' onClick={() => removeFilter2()}><FaStar /> pureveg <IoIosClose className='w-3 h-3' /></h3>
+                    :
+                    <h3 className=' flex items-center justify-center text-[14px] gap-1 rounded-[10px] bg-[#f8c78c] text-brown p-2 ' onClick={() => Pureveg()}><FaStar />pureveg</h3>
+                } */}
 
                 <h3 className=' flex items-center justify-center text-[14px] gap-1 rounded-[10px] bg-[#f8c78c] text-brown p-2 '>Offers</h3>
                 <h3 className=' flex items-center justify-center text-[14px] gap-1 rounded-[10px] bg-[#f8c78c] text-brown p-2 '><FaStar />Less than Rs. 300</h3>
@@ -73,3 +101,4 @@ const Allrestaurants = () => {
 }
 
 export default Allrestaurants
+
