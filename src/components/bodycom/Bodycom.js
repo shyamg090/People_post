@@ -9,7 +9,7 @@ const Bodycom = () => {
   const value = "Bengaluru"
 
   return (
-    <div className='mx-32'>
+    <div className='lg:mx-32'>
 
       <Search/>
 

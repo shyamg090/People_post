@@ -9,6 +9,7 @@ const App = () => {
     <Header/>
     <Bodycom/>
     <Footer/>
+    
   </div>  
   )
 }

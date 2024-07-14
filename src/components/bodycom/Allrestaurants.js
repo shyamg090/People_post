@@ -68,7 +68,7 @@ const Allrestaurants = () => {
 
     return (
         <div>
-            <div className='w-full flex justify-center items-center gap-3 m-5 cursor-pointer'>
+            <div className='w-full flex justify-center items-center gap-3 cursor-pointer'>
                 <h3 className='flex items-center justify-center text-[14px] gap-1 rounded-[10px] bg-[#f8c78c] text-brown p-2' ><MdDeliveryDining /> Fast Delivery  </h3>
                 <h4 className='flex items-center justify-center text-[14px] gap-1 rounded-[10px] bg-[#f8c78c] text-brown p-2'><FaLeaf /> Pure Veg</h4>
                 <h3 className=' flex items-center justify-center text-[14px] gap-1 rounded-[10px] bg-[#f8c78c] text-brown p-2 tracking-tight'>Rs. 300 - Rs. 600</h3>
@@ -87,7 +87,7 @@ const Allrestaurants = () => {
                 <h3 className=' flex items-center justify-center text-[14px] gap-1 rounded-[10px] bg-[#f8c78c] text-brown p-2 '>Offers</h3>
                 <h3 className=' flex items-center justify-center text-[14px] gap-1 rounded-[10px] bg-[#f8c78c] text-brown p-2 '><FaStar />Less than Rs. 300</h3>
             </div>
-            <div className='flex flex-wrap items-center justify-center'>
+            <div className='grid lg:grid-cols-4 grid-cols-1 grid-rows-none items-center justify-center'>
                 {
                     famousChain.slice(0,).map((item) => {
                         return (
