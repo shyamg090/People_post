@@ -23,7 +23,8 @@ const Allrestaurants = () => {
         )
 
         const json1 = await data1.json();
-        const data = json1?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
+
+        const data = json1?.data?.cards[3]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
 
         setFamouschain(data);
         // setPrevdata(data);
@@ -89,7 +90,7 @@ const Allrestaurants = () => {
             </div>
             <div className='grid lg:grid-cols-4 grid-cols-1 grid-rows-none items-center justify-center'>
                 {
-                    famousChain.slice(0,).map((item) => {
+                    famousChain && famousChain.slice(0,10).map((item) => {
                         return (
                             <FamResCard key={item?.info?.id} resChain={item?.info} />
                         )

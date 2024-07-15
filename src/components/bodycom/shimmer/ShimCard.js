@@ -2,7 +2,7 @@ import React from 'react'
 
 const ShimCard = () => {
 
-    const array = [1, 2, 3, 4];
+    const array = [11, 12, 13, 14];
 
     return (
         <div className='flex items-center justify-center w-full m-5 '>
