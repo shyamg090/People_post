@@ -22,14 +22,14 @@ const Bodycom = () => {
 
       <div className='flex flex-col items-start justify-center'>
         <h1 className='text-[1.5rem] font-bold font-serif'>
-          Famous restaurant Chain in {value}
+          Famous recipes around the Globe
         </h1>
         <FamRes />
       </div>
 
       <div className='flex flex-col items-start justify-center'>
         <h1 className='text-[1.5rem] font-bold font-serif'>
-          Famous restaurant Chain in {value}
+          Recipies that you'll love to prepare
         </h1>
         <Allrestaurants />
       </div>

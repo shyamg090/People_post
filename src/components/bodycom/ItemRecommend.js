@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import ItemCard from './ItemCard'
 import ShimItem from './shimmer/ShimItem';
+import { whatsOnYourMind } from '../../utils/constant';
 
 // data.cards.imageGridCards.info[array]
 
@@ -16,16 +17,13 @@ const ItemRecommend = () => {
 
     const getdata1 = async () => {
 
-            const data1 = await fetch(
-                "https://food-delivery-cors.vercel.app/api/proxy/swiggy/dapi/restaurants/list/v5?lat=12.9715987&lng=77.5945627&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING",
-            );
+            const data1 = await fetch(whatsOnYourMind);
 
             const json = await data1.json();
             // console.log(json); 
-            const data = json?.data?.cards[0]?.card?.card?.gridElements;
-            // console.log(json?.data?.cards[2]); 
-            console.log(data);
-            // setItemList(data); 
+
+            // console.log(json);
+            setItemList(json); 
     }
     // console.log(itemList);
 
@@ -40,7 +38,7 @@ const ItemRecommend = () => {
                 {
                     itemList && itemList.map((item) => {
                         return (
-                            <ItemCard key={item?.id} image={item?.imageId} />
+                            <ItemCard key={item?.id} image={item?.image} />
                         )
                     })
                 }

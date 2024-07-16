@@ -5,12 +5,12 @@ import { FaCross, FaLeaf, FaSlack } from "react-icons/fa6";
 import { FaStar } from "react-icons/fa";
 import { IoIosClose } from "react-icons/io";
 
-const Allrestaurants = () => {
-    const [famousChain, setFamouschain] = useState([])
-    const [prevdata , setPrevdata] = useState([]);
 
-    const [filterapplied1, setfilterapplied1] = useState(false);
-    const [filterapplied2, setfilterapplied2] = useState(false);
+import { foodRecipie } from '../../utils/constant';
+
+const Allrestaurants = () => {
+    
+    const [famousChain, setFamouschain] = useState([])
 
 
     useEffect(() => {
@@ -18,17 +18,15 @@ const Allrestaurants = () => {
     }, [])
 
     const getdata = async () => {
-        const data1 = await fetch(
-            "https://food-delivery-cors.vercel.app/api/proxy/swiggy/dapi/restaurants/list/v5?lat=12.9715987&lng=77.5945627&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING",
-        )
+        const apidata = await fetch(foodRecipie);
 
-        const json1 = await data1.json();
-
-        const data = json1?.data?.cards[3]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
+        const data = await apidata.json();
 
         setFamouschain(data);
-        // setPrevdata(data);
     }
+
+    // console.log(famousChain)
+
 
     const Fourstar = () => {
 
@@ -36,25 +34,22 @@ const Allrestaurants = () => {
 
         const filter4rating = famousChain.filter((item) => {
             // console.log(item.info.avgRating);
-            return item.info.avgRating >= 4.7
+            return item.rating >= 4.0
         })
 
-        setfilterapplied1(!filterapplied1);
 
         return setFamouschain(filter4rating);
 
     }
 
-    const Pureveg = () => {
-        setPrevdata(famousChain);
+    const Difficulty = () => {
 
-        const filterVeg = famousChain.filter((item) => {
+        const diff = famousChain.filter((item) => {
             // console.log(item.info.avgRating);
-            return item.info.badges?.imageBadges[0]?.description == "pureveg"
+            return item.difficulty == "easy"
         })
-        setfilterapplied2(!filterapplied2);
 
-        return setFamouschain(filterVeg);
+        return setFamouschain(diff);
     }
 
     const removeFilter1 = () => {
@@ -74,7 +69,7 @@ const Allrestaurants = () => {
                 <h4 className='flex items-center justify-center text-[14px] gap-1 rounded-[10px] bg-[#f8c78c] text-brown p-2'><FaLeaf /> Pure Veg</h4>
                 <h3 className=' flex items-center justify-center text-[14px] gap-1 rounded-[10px] bg-[#f8c78c] text-brown p-2 tracking-tight'>Rs. 300 - Rs. 600</h3>
 
-                {filterapplied1 ? <h3 className=' flex items-center justify-center text-[14px] gap-1 rounded-[10px] bg-yellow-950 text-[#f8c78c] p-2 ' onClick={() => removeFilter1()}><FaStar /> 4.0+  <IoIosClose className='w-3 h-3' /></h3>
+                {false ? <h3 className=' flex items-center justify-center text-[14px] gap-1 rounded-[10px] bg-yellow-950 text-[#f8c78c] p-2 ' onClick={() => removeFilter1()}><FaStar /> 4.0+  <IoIosClose className='w-3 h-3' /></h3>
                     :
                     <h3 className=' flex items-center justify-center text-[14px] gap-1 rounded-[10px] bg-[#f8c78c] text-brown p-2 ' onClick={() => Fourstar()}><FaStar />4.0+</h3>
                 }
@@ -90,10 +85,8 @@ const Allrestaurants = () => {
             </div>
             <div className='grid lg:grid-cols-4 grid-cols-1 grid-rows-none items-center justify-center'>
                 {
-                    famousChain && famousChain.slice(0,10).map((item) => {
-                        return (
-                            <FamResCard key={item?.info?.id} resChain={item?.info} />
-                        )
+                    famousChain && famousChain.map((item) => {
+                        return <FamResCard key={item?.id} resChain={item} />
                     })
                 }
             </div>
