@@ -11,9 +11,7 @@ const Bodycom = () => {
   return (
     <div className='lg:mx-32'>
 
-      <Search/>
-
-      <div className='flex flex-col items-start justify-center my-[4rem] '>
+      <div className='flex flex-col items-start justify-center my-[1rem] '>
         <h1 className='text-[1.5rem] font-bold font-serif'>
           Whats on your mind?
         </h1>
@@ -26,6 +24,8 @@ const Bodycom = () => {
         </h1>
         <FamRes />
       </div>
+
+      <Search/>
 
       <div className='flex flex-col items-start justify-center'>
         <h1 className='text-[1.5rem] font-bold font-serif'>
