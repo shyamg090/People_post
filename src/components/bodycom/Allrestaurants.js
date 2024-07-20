@@ -35,14 +35,14 @@ const Allrestaurants = () => {
 
     const Fourstar = () => {
 
-        setPrevdata(famousChain);
+        // setPrevdata(famousChain);
 
-        const filter4rating = famousChain.filter((item) => {
+        const filter4rating = filteredRes.filter((item) => {
             // console.log(item.info.avgRating);
-            return item.rating >= 4.0
+            return item.rating >= 4.8
         })
 
-        return setFamouschain(filter4rating);
+        return setFilteredRes(filter4rating);
     }
 
 
@@ -66,10 +66,10 @@ const Allrestaurants = () => {
                 <h4 className='flex items-center justify-center text-[14px] gap-1 rounded-[10px] bg-[#f8c78c] text-brown p-2'><FaLeaf /> Pure Veg</h4>
                 <h3 className=' flex items-center justify-center text-[14px] gap-1 rounded-[10px] bg-[#f8c78c] text-brown p-2 tracking-tight'>Rs. 300 - Rs. 600</h3>
 
-                {false ? <h3 className=' flex items-center justify-center text-[14px] gap-1 rounded-[10px] bg-yellow-950 text-[#f8c78c] p-2 '><FaStar /> 4.0+  <IoIosClose className='w-3 h-3' /></h3>
-                    :
+                {/* {false ? <h3 className=' flex items-center justify-center text-[14px] gap-1 rounded-[10px] bg-yellow-950 text-[#f8c78c] p-2 '><FaStar /> 4.0+  <IoIosClose className='w-3 h-3' /></h3> */}
+                    {/* : */}
                     <h3 className=' flex items-center justify-center text-[14px] gap-1 rounded-[10px] bg-[#f8c78c] text-brown p-2 ' onClick={() => Fourstar()}><FaStar />4.0+</h3>
-                }
+                {/* } */}
 
                 <h3 className=' flex items-center justify-center text-[14px] gap-1 rounded-[10px] bg-[#f8c78c] text-brown p-2 '>Offers</h3>
                 <h3 className=' flex items-center justify-center text-[14px] gap-1 rounded-[10px] bg-[#f8c78c] text-brown p-2 '><FaStar />Less than Rs. 300</h3>
