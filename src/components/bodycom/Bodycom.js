@@ -33,7 +33,7 @@ const Bodycom = () => {
         </h1>
         <Allrestaurants />
       </div>
-
+{/*  */}
     </div>
   )
 }
