@@ -7,6 +7,7 @@ import About from './components/pages/About'
 import Contact from './components/pages/Contact';
 import Error from './components/pages/Error';
 import Bodycom from './components/bodycom/Bodycom';
+import Recipie from './components/pages/Recipie';
 
 const appLayout = createBrowserRouter([
     {
@@ -24,6 +25,9 @@ const appLayout = createBrowserRouter([
             {
                 path : '/contact',
                 element : <Contact/>
+            },{
+                path : '/recipie/:id',
+                element : <Recipie />
             }
         ],
         errorElement : <Error/>

@@ -26,15 +26,13 @@ const Bodycom = () => {
         <FamRes />
       </div>
 
-      <Search/>
-
-      <div className='flex flex-col items-start justify-center'>
-        <h1 className='text-[1.5rem] font-bold font-serif'>
-          Recipies that you'll love to prepare
-        </h1>
+      <div className='flex flex-col items-start justify-center '>
+        <div className='w-full flex items-center justify-center lg:text-[3rem] text-[2rem] font-bold font-serif  '>
+          <h1>Discover the best food recipies</h1>
+        </div>
         <Allrestaurants />
       </div>
-{/*  */}
+      {/*  */}
     </div>
   )
 }

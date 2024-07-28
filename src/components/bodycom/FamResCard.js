@@ -29,9 +29,9 @@ const FamResCard = ({ resChain }) => {
       <h1 className='w-full text-[18px] text-tight font-serif font-extrabold leading-3'>{resChain?.name}</h1>
       <h4 className='text-[.8rem] w-full'>{resChain?.tags.join(", ")}</h4>
       <div className='w-full flex justify-evenly items-center '>
-        <h3 className='flex items-center justify-center text-[14px] gap-1 rounded-[10px] bg-[#f8c78c] text-brown p-2' > {resChain?.rating}  <IoIosStar className='w-3 h-4' /> </h3>
-        <h4 className='flex items-center justify-center text-[14px] gap-1 rounded-[10px] bg-[#f8c78c] text-brown p-2'>{resChain?.prepTimeMinutes} min</h4>
-        <h3 className=' flex items-center justify-center text-[14px] gap-1 rounded-[10px] bg-[#f8c78c] text-brown p-2 font-extrabold'>serving {resChain?.servings}</h3>
+        <h3 className='flex items-center justify-center text-[14px] gap-1 rounded-[10px] bg-[#ffb502] text-brown p-2' > {resChain?.rating}  <IoIosStar className='w-3 h-4' /> </h3>
+        <h4 className='flex items-center justify-center text-[14px] gap-1 rounded-[10px] bg-[#ffb502] text-brown p-2'>{resChain?.prepTimeMinutes} min</h4>
+        <h3 className=' flex items-center justify-center text-[14px] gap-1 rounded-[10px] bg-[#ffb502] text-brown p-2 font-extrabold'>serving {resChain?.servings}</h3>
       </div>
       {/* <h3>{resChain.instructions.join(" ")} </h3>
       <button className='w-20 h-10 bg-red-500 text-black rounded-md' onClick={()=>sound(resChain.instructions.join(" "))}> convert sound  </button> */}
