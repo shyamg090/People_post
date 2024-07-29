@@ -8,6 +8,7 @@ import Contact from './components/pages/Contact';
 import Error from './components/pages/Error';
 import Bodycom from './components/bodycom/Bodycom';
 import Recipie from './components/pages/Recipie';
+import Body from './components/bodycom/Body';
 
 const appLayout = createBrowserRouter([
     {
@@ -16,7 +17,7 @@ const appLayout = createBrowserRouter([
         children : [
             {
                 path : '/',
-                element : <Bodycom />
+                element : <Body />
             },
             {
                 path : '/about',

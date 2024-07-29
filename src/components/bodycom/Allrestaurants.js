@@ -8,6 +8,7 @@ import { IoIosClose } from "react-icons/io";
 import { FaSearch } from "react-icons/fa";
 
 import { foodRecipie } from '../../utils/constant';
+import { Link } from 'react-router-dom';
 
 const Allrestaurants = () => {
 
@@ -89,7 +90,7 @@ const Allrestaurants = () => {
             <div className='grid lg:flex lg:flex-wrap grid-cols-1 grid-rows-none items-center justify-center'>
                 {
                     filteredRes && filteredRes.map((item) => {
-                        return <FamResCard key={item?.id} resChain={item} />
+                        return <Link to={`/recipie/${item?.id}`}><FamResCard key={item?.id} resChain={item} /></Link> 
                     })
                 }
             </div>
