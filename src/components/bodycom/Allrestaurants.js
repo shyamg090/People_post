@@ -57,7 +57,7 @@ const Allrestaurants = () => {
         <div>
             {/* <div className='w-full flex flex-col items-center justify-center '> */}
 
-                <div className='flex flex-wrap justify-center items-center gap-3 m-4 p-2 cursor-pointer top-0 sticky z-30 bg-white'>
+                <div className='flex flex-wrap justify-center items-center gap-3 m-4 p-2 cursor-pointer top-32 sticky z-30 bg-white'>
 
                     <div className='flex items-center justify-center'>
                         {/* <h2 className='flex items-center justify-center p-4 rounded-md bg-[#ffb502]'> <FaSearch className='w-4 h-4 mx-1 text-[#ffb502]' />value</h2> */}

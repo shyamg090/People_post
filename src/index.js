@@ -9,6 +9,7 @@ import Error from './components/pages/Error';
 import Bodycom from './components/bodycom/Bodycom';
 import Recipie from './components/pages/Recipie';
 import Body from './components/bodycom/Body';
+import UserClass from './components/pages/UserClass';
 
 const appLayout = createBrowserRouter([
     {
@@ -29,6 +30,9 @@ const appLayout = createBrowserRouter([
             },{
                 path : '/recipie/:id',
                 element : <Recipie />
+            },{
+                path : '/class',
+                element : <UserClass name= {'this is how to use props in class'} />
             }
         ],
         errorElement : <Error/>
