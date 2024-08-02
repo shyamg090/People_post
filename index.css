@@ -1,12 +1,51 @@
+/* styles.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
 ::-webkit-scrollbar {
     display: none;
 }
+
+body {
+  @apply bg-cream  text-black;
+}
 /* 
-*{
-    background-color: rgb(251, 238, 194);
+font-
+
+h1, h2, h3, h4, h5, h6 {
+  @apply font-heading text-yellow;
+}
+
+h2 {
+  @apply font-subheading text-darkGreen;
+}
+
+ul, ol {
+  @apply font-points;
+}
+
+p {
+  @apply font-paragraph;
+}
+
+.header, .footer {
+  @apply bg-brown text-cream;
+}
+
+.button-primary {
+  @apply bg-yellow text-darkBrown;
+}
+
+.button-secondary {
+  @apply bg-brown text-cream;
+}
+
+a {
+  @apply text-darkGreen;
+}
+
+a:hover, a:active {
+  @apply text-darkBrown;
 } */
+

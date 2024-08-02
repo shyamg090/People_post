@@ -9,7 +9,7 @@ const ShimCard = () => {
             {
                 array.map((item) => {
                     return (
-                        <div className='flex flex-col items-center justify-evenly min-w-[18rem] h-[20rem] font-mono gap-3 p-2 rounded-xl hover:scale-95 shadow-xl' key={item}  >
+                        <div className='flex flex-col items-center justify-evenly min-w-[18rem] h-[20rem] font-mono gap-3 p-2 rounded-xl hover:scale-95 shadow-xl animate-pulse' key={item}  >
                             <div className='rounded-lg w-full h-[12rem] bg-[#f6f6f6] bg-cover bg-center' >
                             </div>
                             <h1 className='w-[70%] h-[50px] bg-[#f6f6f6] rounded-full'></h1>

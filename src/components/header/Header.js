@@ -8,9 +8,7 @@ import { Link } from 'react-router-dom';
 const Header = () => {
   return (
 
-    <div>
-
-      <div className='w-full flex justify-between fixed top-0 z-30 backdrop-blur-sm'>
+      <div className='w-full flex justify-between sticky top-0 backdrop-blur-sm'>
         <div className='lg:w-28 lg:h-24 lg:ml-4 w-16 h-14 m-4 cursor-pointer'>
           <img src={require('../assets/header-images/wefood.png')} alt="food logo" srcset="" />
         </div>
@@ -27,7 +25,6 @@ const Header = () => {
 
 
 
-    </div>
 
   )
 }

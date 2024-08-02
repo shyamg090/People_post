@@ -5,8 +5,8 @@ import { SEARCH_BG_IMG } from '../../utils/constant';
 const ItemCard = ({image}) => {
 
   return (
-    <div className='flex flex-col items-center justify-center min-w-[10rem] font-serif gap-3 p-2 m-2 rounded-xl hover:scale-[1rem]' >
-      <img className='hover:scale-90 ' src={image} alt='foodpartner' ></img>
+    <div className='flex flex-col items-center justify-center lg:min-w-[12rem] min-w-[10rem] font-serif gap-3 p-2 m-2 rounded-xl hover:scale-[1rem]' >
+      <img className='hover:scale-90 mix-blend-darken ' src={image} alt='foodpartner' ></img>
     </div>
   )
 }

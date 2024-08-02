@@ -17,6 +17,7 @@ const Allrestaurants = () => {
 
     const [searchtext, setSearchtext] = useState("");
 
+    const [load, setLoad] = useState(9)
 
     useEffect(() => {
         getdata();
@@ -52,6 +53,9 @@ const Allrestaurants = () => {
         return setFilteredRes(fast);
     }
 
+    const loadmore = ()=>{
+        setLoad( load + 9)
+    }
 
     return (
         <div>
@@ -89,11 +93,12 @@ const Allrestaurants = () => {
 
             <div className='grid lg:flex lg:flex-wrap grid-cols-1 grid-rows-none items-center justify-center'>
                 {
-                    filteredRes && filteredRes.map((item) => {
+                    filteredRes && filteredRes.slice(0,load).map((item) => {
                         return <Link to={`/recipie/${item?.id}`}><FamResCard key={item?.id} resChain={item} /></Link> 
                     })
                 }
             </div>
+            <button onClick={()=>loadmore()} className='w-[10rem] h-[10rem] bg-yellow p-3'>Load More</button>
         </div>
     )
 }

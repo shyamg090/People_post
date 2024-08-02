@@ -33,7 +33,7 @@ const ItemRecommend = () => {
 
     return (
         <div className='w-full'>
-            <div className='flex items-start overflow-x-scroll rounded-xl '>
+            <div className='flex items-start overflow-x-scroll rounded-full '>
                 {
                     itemList && itemList.map((item) => {
                         return (
