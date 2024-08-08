@@ -10,3 +10,7 @@
  export const bannerImg1 = " https://images.pexels.com/photos/27457147/pexels-photo-27457147/free-photo-of-traditional-image.png"
 
  export const bannerImg2 = " https://images.pexels.com/photos/27457154/pexels-photo-27457154/free-photo-of-traditional-card-for-food.png"
+
+
+export const bg = "black"
+
