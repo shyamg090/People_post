@@ -6,13 +6,14 @@
 ::-webkit-scrollbar {
     display: none;
 }
+
 .containerCustom{
   -webkit-mask: linear-gradient(90deg,#0000,#000 10% 80%,#0000)
 }
 
-
 body {
   @apply bg-[#F5F5F5]  text-black;
+  /* @apply font-[Bodoni Moda SC] */
 }
 /* 
 font-

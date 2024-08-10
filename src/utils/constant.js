@@ -1,5 +1,7 @@
  
  export const foodRecipie = "https://dummyjson.com/c/3b88-e44d-4a78-9dbc";
+
+ export const recipies = 'https://dummyjson.com/recipes'
  
  export const whatsOnYourMind = "https://dummyjson.com/c/dc61-9adb-47d2-a021";
 
@@ -13,4 +15,6 @@
 
 
 export const bg = "black"
+
+
 

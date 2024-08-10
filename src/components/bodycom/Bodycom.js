@@ -14,17 +14,17 @@ const Bodycom = () => {
   
   return (
 
-    <div className='z-20 bg-[#F4D03F]'>
+    <div className='z-20 '>
 
       <div className='lg:mx-32 flex flex-col items-start justify-center z-20'>
-        <div className='w-full flex items-center justify-center lg:text-[3rem] text-[2rem] font-bold font-serif  '>
+        <div className='w-full flex items-center justify-center lg:text-[3rem] text-[2rem] font-bold '>
           <h1>Famous Food Recipies</h1>
         </div>
         <FamRes />
       </div>
 
       <div className='flex flex-col items-start justify-center z-20'>
-        <div className='w-full flex items-center justify-center lg:text-[3rem] text-[2rem] font-bold font-serif  '>
+        <div className='w-full flex items-center justify-center lg:text-[3rem] text-[2rem] font-bold '>
           <h1>Discover the best food recipies</h1>
         </div>
         <Allrestaurants />

@@ -23,7 +23,7 @@ const Bodycom1 = () => {
         <div className='flex flex-col slider'>
             <div className='mx-24'>
                 <div className=' flex flex-col items-start justify-center z-20 gap-10 mt-10' >
-                    <div className='w-full flex items-center justify-center lg:text-[3rem] text-[2rem] font-bold font-serif '>
+                    <div className='w-full flex items-center justify-center lg:text-[3rem] text-[2rem] font-bold '>
                         <h1>Whats on your mind</h1>
                     </div>
 

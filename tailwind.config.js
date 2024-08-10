@@ -11,10 +11,7 @@ module.exports = {
         darkGreen: '#388E3C',
       },
       fontFamily: {
-        heading: ['Poppins', 'sans-serif'],
-        subheading: ['Raleway', 'sans-serif'],
-        points: ['Lato', 'sans-serif'],
-        paragraph: ['Open Sans', 'sans-serif'],
+        wefont : "Bodoni Moda SC"
       },
     },
   },

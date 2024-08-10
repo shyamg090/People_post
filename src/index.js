@@ -10,6 +10,7 @@ import Bodycom from './components/bodycom/Bodycom';
 import Recipie from './components/pages/Recipie';
 import Body from './components/bodycom/Body';
 import UserClass from './components/pages/UserClass';
+import Context from './contextAPI/Context';
 
 const appLayout = createBrowserRouter([
     {
@@ -42,5 +43,6 @@ const appLayout = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById("root"))
 
 root.render(
-    <RouterProvider router={appLayout} />
+    <Context><RouterProvider router={appLayout} /></Context>
+    
 );
