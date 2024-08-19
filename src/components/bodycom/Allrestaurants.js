@@ -9,9 +9,10 @@ import { FaSearch } from "react-icons/fa";
 
 // import { recipes } from '../../utils/constant';
 import { Link } from 'react-router-dom';
-import ContextData from '../../contextAPI/Context';
+import {ContextData} from '../../contextAPI/Context';
 
 const Allrestaurants = () => {
+    console.log(ContextData);
 
     const { recipes , setRecipes, filteredrecipes, setFilteredRecipes} = useContext(ContextData);
 

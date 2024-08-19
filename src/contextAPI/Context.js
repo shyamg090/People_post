@@ -20,7 +20,6 @@ const Context = ({children}) => {
     }
 
 
-
   return (
     <ContextData.Provider value={{recipes , setRecipes, filteredrecipes, setFilteredRecipes}}>
         {children}
