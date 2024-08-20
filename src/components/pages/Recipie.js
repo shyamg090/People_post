@@ -3,30 +3,31 @@ import { foodRecipie } from "../../utils/constant";
 import { useParams } from "react-router-dom";
 
 import ShimPage from "../bodycom/shimmer/ShimPage";
+import useRecipie from '../../utils/useRecipie'
 
 const Recipie = () => {
+    const {id} = useParams();
 
-    const [recipie, setRecipie] = useState(null)
+    const recipie = useRecipie(id);
 
-    const params = useParams();
-    // console.log(params.id);
+    // const [recipie, setRecipie] = useState(null)
 
-    useEffect(() => {
-        fetchRecipie()
-    }, [])
+    // useEffect(() => {
+    //     fetchRecipie()
+    // }, [])
 
-    const fetchRecipie = async () => {
-        const data = await fetch(foodRecipie);
-        const json = await data.json();
-        console.log(json);
+    // const fetchRecipie = async () => {
+    //     const data = await fetch(foodRecipie);
+    //     const json = await data.json();
+    //     console.log(json);
 
-        const [ recipie_data ] = json.filter((rec) => {
-            return rec.id == params.id;
-        })
-        console.log(recipie_data);
+    //     const [ recipie_data ] = json.filter((rec) => {
+    //         return rec.id == params.id;
+    //     })
+    //     console.log(recipie_data);
 
-        setRecipie(recipie_data);
-    }
+    //     setRecipie(recipie_data);
+    // }
 
     if(recipie == null){
         return <ShimPage/>

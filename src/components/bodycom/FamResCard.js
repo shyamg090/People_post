@@ -20,7 +20,7 @@ const FamResCard = ({ resChain }) => {
   // const image = SEARCH_BG_IMG + resChain?.cloudinaryImageId;
   // min-w-[18rem] h-[21rem]
   return (
-    <div className='flex flex-col items-center justify-evenly min-w-[20rem] h-[23rem] gap-3 p-2 rounded-xl shadow-xl'  >
+    <div className='flex flex-col items-center justify-evenly min-w-[20rem] h-[23rem] gap-3 p-2 rounded-xl shadow-xl' >
       <div className='rounded-lg w-full h-[12rem] overflow-hidden'>
         <div className='w-full h-full bg-cover bg-center transition-transform duration-1000 hover:scale-110' style={{ backgroundImage: `url("${resChain.image}")` }}  >
           <div className='w-full h-full flex items-end bg-gradient-to-t from-black to-transparent rounded-lg'>

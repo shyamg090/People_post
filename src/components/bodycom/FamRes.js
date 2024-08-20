@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import FamResCard from './FamResCard'
 import ShimCard from './shimmer/ShimCard'
+import { Link } from 'react-router-dom';
 
 const FamRes = () => {
 // https://dummyjson.com/products/category/groceries
@@ -34,7 +35,7 @@ const FamRes = () => {
         {
           famousChain && famousChain.slice(9,18).map((item) => {
             return (
-              <FamResCard key={item?.id} resChain={item} />
+             <Link to={`/recipie/${item?.id}`} > <FamResCard key={item?.id} resChain={item} /></Link>
             )
           })
         }
