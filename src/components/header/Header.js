@@ -3,9 +3,19 @@ import { FaShoppingCart } from "react-icons/fa"
 import { FaUser } from "react-icons/fa";
 import { FaHome } from "react-icons/fa";
 import { Link } from 'react-router-dom';
+import useOnlineStatus from '../../utils/useOnlineStatus';
 
 
 const Header = () => {
+
+  const onlineStatus = useOnlineStatus();
+
+  if(!onlineStatus){
+    return (
+    <h1 className='h-[300px] flex items-center justify-center'>OOps, looks like your offline</h1>
+    )
+  }
+  else {
   return (
 
       <div className='w-full flex justify-between sticky top-0 backdrop-blur-sm'>
@@ -24,9 +34,8 @@ const Header = () => {
       </div>
 
 
-
-
   )
+}
 }
 
 export default Header

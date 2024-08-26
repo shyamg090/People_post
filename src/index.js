@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
@@ -11,6 +11,11 @@ import Recipie from './components/pages/Recipie';
 import Body from './components/bodycom/Body';
 import UserClass from './components/pages/UserClass';
 import Context from './contextAPI/Context';
+// import Grocery from '';
+
+import { lazy } from 'react';
+
+const Grocery = lazy(()=> import('./components/pages/Grocery'))
 
 const appLayout = createBrowserRouter([
     {
@@ -34,6 +39,12 @@ const appLayout = createBrowserRouter([
             },{
                 path : '/class',
                 element : <UserClass name= {'this is how to use props in class'} />
+            },
+            {
+                path : '/grocery',
+                element : <Suspense fallback = {<h1>Loading my friend!!</h1>} >
+                    <Grocery/>
+                </Suspense>
             }
         ],
         errorElement : <Error/>
