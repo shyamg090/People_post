@@ -8,7 +8,7 @@ const Search = () => {
       {/* <div className='h-[200px] flex flex-col items-center justify-center bg-cover bg-repeat-none bg-center rounded-2xl gap-4' style={{ backgroundImage: `url("https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/1171b83d63d7c203e5f1c3e16980cd89")`, background: "none", }}> */}
         <div className='w-full h-full flex flex-col items-center justify-center gap-4 rounded-2xl'>
           <div className='w-full flex items-center justify-center lg:text-[3rem] text-[2rem] font-bold'>
-            <h1>Discover the best food recipies</h1>
+            <h1>Discover post that inspires you</h1>
           </div>
           <div className='flex items-center justify-center'>
             <h2 className='flex items-center justify-center p-4 rounded-md bg-[#f8c78c]'> <FaLocationDot className='w-4 h-4 mx-1 text-[#ffb502]' />value</h2>

@@ -7,7 +7,7 @@ import About from './components/pages/About'
 import Contact from './components/pages/Contact';
 import Error from './components/pages/Error';
 import Bodycom from './components/bodycom/Bodycom';
-import Recipie from './components/pages/Recipie';
+import Post from './components/pages/Post';
 import Body from './components/bodycom/Body';
 import UserClass from './components/pages/UserClass';
 import Context from './contextAPI/Context';
@@ -15,7 +15,7 @@ import Context from './contextAPI/Context';
 
 import { lazy } from 'react';
 
-const Grocery = lazy(()=> import('./components/pages/Grocery'))
+const Comment = lazy(()=> import('./components/pages/Comment'))
 
 const appLayout = createBrowserRouter([
     {
@@ -34,8 +34,8 @@ const appLayout = createBrowserRouter([
                 path : '/contact',
                 element : <Contact/>
             },{
-                path : '/recipie/:id',
-                element : <Recipie />
+                path : '/post/:id',
+                element : <Post />
             },{
                 path : '/class',
                 element : <UserClass name= {'this is how to use props in class'} />
@@ -43,7 +43,7 @@ const appLayout = createBrowserRouter([
             {
                 path : '/grocery',
                 element : <Suspense fallback = {<h1>Loading my friend!!</h1>} >
-                    <Grocery/>
+                    <Comment/>
                 </Suspense>
             }
         ],

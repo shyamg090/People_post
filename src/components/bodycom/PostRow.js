@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react'
-import FamResCard from './FamResCard'
+import PostRowCard from './PostRowCard'
 import ShimCard from './shimmer/ShimCard'
 import { Link } from 'react-router-dom';
 
-const FamRes = () => {
+const PostRow = () => {
 // https://dummyjson.com/products/category/groceries
 // https://dummyjson.com/c/ad29-fbf4-489e-98ed
 
-  const [famousChain, setFamousChain] = useState([ ]);
+  const [famousPost, setFamousPost] = useState([ ]);
   const [count, setCount] = useState(true);
 
   useEffect(() => {
@@ -17,15 +17,15 @@ const FamRes = () => {
   const getData = async () => {
     // console.log("1");
     const data1 = await fetch(
-      "https://dummyjson.com/recipes"
+      "https://dummyjson.com/posts"
     )
 
     const json1 = await data1.json();
 
-    setFamousChain(json1?.recipes);
+    setFamousPost(json1?.posts);
   }
 
-  if (famousChain.length === 0) {
+  if (famousPost.length === 0) {
     return <ShimCard />
   }
 
@@ -33,9 +33,9 @@ const FamRes = () => {
     <div className='h-[420px] w-full my-5'>
       <div className='flex overflow-x-scroll gap-10 p-5'>
         {
-          famousChain && famousChain.slice(9,18).map((item) => {
+          famousPost && famousPost.slice(9,18).map((item) => {
             return (
-             <Link to={`/recipie/${item?.id}`} > <FamResCard key={item?.id} resChain={item} /></Link>
+             <Link to={`/post/${item?.id}`} > <PostRowCard key={item?.id} postItem={item} /></Link>
             )
           })
         }
@@ -44,4 +44,4 @@ const FamRes = () => {
   )
 }
 
-export default FamRes;
+export default PostRow;

@@ -1,16 +1,16 @@
 import { useEffect, useState } from "react"
-import { foodRecipie } from "./constant";
+import { foodPost } from "./constant";
 
-const useRecipie = (id)=>{
+const usePost = (id)=>{
 
-    const [recipie, setRecipie] = useState(null);
+    const [recipie, setPost] = useState(null);
 
     useEffect(()=>{
         getapi();
     },[])
 
     const getapi = async()=>{
-        const data = await fetch(foodRecipie + `/${id}`);
+        const data = await fetch(foodPost + `/${id}`);
         const json = await data.json();
 
                const [ recipie_data ] = json.filter((rec) => {
@@ -18,10 +18,10 @@ const useRecipie = (id)=>{
         })
         console.log(recipie_data);
 
-        setRecipie(recipie_data);
+        setPost(recipie_data);
         
     }
 
     return recipie
 }
-export default useRecipie;
+export default usePost;

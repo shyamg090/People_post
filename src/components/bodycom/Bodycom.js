@@ -1,13 +1,7 @@
 import React from 'react'
 import Search from './Search';
-import Allrestaurants from './Allrestaurants';
-import FamRes from './FamRes';
-
-
-
-
-import { IoFastFoodSharp } from 'react-icons/io5'
-// import {bannerImg1} from '../assets/header-images/img1.png'
+import Allposts from './Allposts';
+import PostRow from './PostRow';
 
 const Bodycom = () => {
 
@@ -18,16 +12,16 @@ const Bodycom = () => {
 
       <div className='lg:mx-32 flex flex-col items-start justify-center z-20'>
         <div className='w-full flex items-center justify-center lg:text-[3rem] text-[2rem] font-bold '>
-          <h1>Famous Food Recipies</h1>
+          <h1>Some Posts to get inspired</h1>
         </div>
-        <FamRes />
+        <PostRow />
       </div>
 
       <div className='flex flex-col items-start justify-center z-20'>
         <div className='w-full flex items-center justify-center lg:text-[3rem] text-[2rem] font-bold '>
-          <h1>Discover the best food recipies</h1>
+          <h1>Discover Some Good Posts</h1>
         </div>
-        <Allrestaurants />
+        <Allposts />
       </div>
       {/*  */}
     </div>

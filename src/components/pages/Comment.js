@@ -1,4 +1,4 @@
-const Grocery = ()=>{
+const Comment = ()=>{
     return(
         <h1>
             This is grocery page order now###
@@ -6,4 +6,4 @@ const Grocery = ()=>{
     )
 }
 
-export default Grocery;
+export default Comment;

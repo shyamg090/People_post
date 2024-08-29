@@ -3,25 +3,25 @@ export const ContextData = createContext();
 
 const Context = ({children}) => {
 
-    const [recipes, setRecipes] = useState([]);
-    const [filteredrecipes, setFilteredRecipes] = useState([]);
+    const [posts, setPosts] = useState([]);
+    const [filteredposts, setFilteredPosts] = useState([]);
 
     useEffect(()=>{
-        getRecipies()
+        getPosts()
     }, [])
 
-    const getRecipies = async ()=>{
-        const recipiesdata = await fetch("https://dummyjson.com/recipes")
+    const getPosts = async ()=>{
+        const recipiesdata = await fetch("https://dummyjson.com/posts")
 
         const jsonData = await recipiesdata.json();
-        console.log(jsonData.recipes);
-        setRecipes(jsonData.recipes)
-        setFilteredRecipes(jsonData.recipes)
+        console.log(jsonData.posts);
+        setPosts(jsonData.posts)
+        setFilteredPosts(jsonData.posts)
     }
 
 
   return (
-    <ContextData.Provider value={{recipes , setRecipes, filteredrecipes, setFilteredRecipes}}>
+    <ContextData.Provider value={{posts , setPosts, filteredposts, setFilteredPosts}}>
         {children}
     </ContextData.Provider>
   )
