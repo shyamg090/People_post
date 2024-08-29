@@ -12,8 +12,16 @@
 }
 
 body {
-  @apply bg-[#F5F5F5]  text-black;
+  @apply bg-[#e9e4de]  text-black font-[SUSE] overflow-x-hidden;
   /* @apply font-[Bodoni Moda SC] */
+}
+
+.not-rendered{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 /* 
 font-

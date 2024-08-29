@@ -1,18 +1,47 @@
+import { useGSAP } from "@gsap/react";
+import gsap from 'gsap'
+
+
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+gsap.registerPlugin(ScrollTrigger);
+
 const Bodycom1 = () => {
 
-    return (
-        <div className='flex flex-col slider'>
-            <div className='mx-24'>
-                <div className=' flex flex-col items-start justify-center z-20 gap-10 mt-10' >
-                    <div className='w-full flex items-center justify-center lg:text-[3rem] text-[2rem] font-bold '>
-                        <h1>People Post To Share</h1>
-                    </div>
+    useGSAP(()=>{
+        gsap.from('#heading', {
+            duration : 1, 
+            delay:1, 
+            transform : "translateY(20%)",
+            opacity : 0,
+        })
 
+        gsap.from(".banner #image",{
+            duration : 2,
+            delay: 1,
+            opacity: 0,
+            transform : "translateX(30%)",
+            // transform : "translatey(10%)",
+            scrollTrigger : {
+                trigger: '.banner #image',
+                scroller : "body",
+                markers : true,
+                start : "top 80%"
+            }
+        })
+    },[])
+
+   
+
+    return (
+        <div className='w-[100%] overflow-x-hidden h-full lg:h-[100vh] flex flex-col slider banner'>
+            <div className='lg:mx-24'>
+                <div className='flex flex-col items-center justify-center lg:flex lg:items-start lg:justify-start lg:gap-10 mt-10' >
+                    <div className='w-full col-span-2 flex items-start justify-start lg:text-[6rem] text-[2rem] font-bold  '>
+                        <h1 id="heading" className="lg:text-[8vw] text-[8vh] p-4 tracking-tighter leading-none">Discover a world of narratives waiting to be explored.</h1>
+                    </div>
+                    <img src="https://cdn.prod.website-files.com/64c73d04a946980a4476537e/64d452de6c35e014ada74a73_Runner.svg" id="image" className="lg:w-[40vw] " alt="bg"></img>
                 </div>
             </div>
-            <svg xmlns="http://www.w3.org/2000/svg" className='relative  z-[10] w-full h-[20rem]'>
-                <path fill="#81C3C6" fill-opacity="1" d="M0,128L34.3,117.3C68.6,107,137,85,206,117.3C274.3,149,343,235,411,245.3C480,256,549,192,617,154.7C685.7,117,754,107,823,117.3C891.4,128,960,160,1029,149.3C1097.1,139,1166,85,1234,80C1302.9,75,1371,117,1406,138.7L1440,160L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"></path>
-            </svg>
         </div>
     )
 }

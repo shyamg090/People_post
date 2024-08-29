@@ -8,7 +8,7 @@ import { CgLastpass } from 'react-icons/cg';
 
 const App = () => {
   return (
-      <div className='flex flex-col'>
+      <div className=''>
       <Header />
       <Outlet />
       <Footer />

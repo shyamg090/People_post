@@ -12,6 +12,7 @@ module.exports = {
       },
       fontFamily: {
         wefont : "Bodoni Moda SC"
+        
       },
     },
   },
