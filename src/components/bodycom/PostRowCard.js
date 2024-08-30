@@ -24,12 +24,9 @@ console.log(postItem);
   return (
     <div className='flex flex-col items-center justify-evenly w-[20rem] h-[23rem] gap-3 p-2 rounded-xl shadow-xl bg-cover bg-center transition-transform duration-1000 hover:scale-110' style={{ backgroundImage: `url("https://img.freepik.com/free-vector/rectangle-gold-frame-with-foliage-pattern-background_53876-99796.jpg?t=st=1724918622~exp=1724922222~hmac=9ab93f34059e71e8718ecd20d5b3e2903faaca2dbad4296becea071b58fceecc&w=826")` }} >
       
-      <div className='rounded-lg w-full h-[12rem] overflow-hidden'>
-        {/* <div className='w-full h-full bg-cover bg-center transition-transform duration-1000 hover:scale-110' style={{ backgroundImage: `url("https://img.freepik.com/free-vector/rectangle-gold-frame-with-foliage-pattern-background_53876-99796.jpg?t=st=1724918622~exp=1724922222~hmac=9ab93f34059e71e8718ecd20d5b3e2903faaca2dbad4296becea071b58fceecc&w=826")` }}  > */}
-          {/* <div className='w-full h-full flex items-end bg-gradient-to-t from-black to-transparent rounded-lg'> */}
+      <div className='rounded-lg w-full overflow-hidden'>
             <h1 className='m-5 w-full text-[1rem] text-white'>Views : {postItem?.views}</h1>
-          {/* </div> */}
-        {/* </div>  */}
+
       </div>
 
       <h1 className='w-full text-[18px] text-tight font-extrabold leading-3'>{postItem?.title}</h1>

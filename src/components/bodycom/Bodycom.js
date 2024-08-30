@@ -8,10 +8,10 @@ const Bodycom = () => {
   
   return (
 
-    <div className='relative'>
+    <div className=''>
 
       <div className='lg:mx-32 flex flex-col items-start justify-center '>
-        <div className='w-full flex items-center justify-center lg:text-[3rem] text-[2rem] font-bold '>
+        <div className='flex items-center justify-center lg:text-[3rem] text-[2rem] font-bold '>
           <h1>Some Posts to get inspired</h1>
         </div>
         <PostRow />

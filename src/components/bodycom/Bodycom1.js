@@ -30,16 +30,15 @@ const Bodycom1 = () => {
         })
     },[])
 
-   
 
     return (
-        <div className='w-[100%] overflow-x-hidden h-full lg:h-[100vh] flex flex-col slider banner'>
-            <div className='lg:mx-24'>
-                <div className='flex flex-col items-center justify-center lg:flex lg:items-start lg:justify-start lg:gap-10 mt-10' >
+        <div className='w-[100%] overflow-x-hidden  lg:h-[100%] flex flex-col slider banner p-4 mb-4'>
+            <div className='lg:mx-24 flex flex-col items-center justify-center'>
+                <div className='flex flex-col items-center justify-center lg:flex lg:flex-row lg:items-center lg:justify-center xl:flex xl:flex-row xl:items-center xl:justify-center lg:gap-10 mt-10' >
                     <div className='w-full col-span-2 flex items-start justify-start lg:text-[6rem] text-[2rem] font-bold  '>
-                        <h1 id="heading" className="lg:text-[8vw] text-[8vh] p-4 tracking-tighter leading-none">Discover a world of narratives waiting to be explored.</h1>
+                        <h1 id="heading" className="lg:text-[8vw] text-[8vh] p-4 tracking-tighter leading-none font-semibold ">Discover a world of narratives waiting to be explored.</h1>
                     </div>
-                    <img src="https://cdn.prod.website-files.com/64c73d04a946980a4476537e/64d452de6c35e014ada74a73_Runner.svg" id="image" className="lg:w-[40vw] " alt="bg"></img>
+                    <img src="https://cdn.prod.website-files.com/64c73d04a946980a4476537e/64d452de6c35e014ada74a73_Runner.svg" id="image" className="lg:w-[40vw]" alt="bg"></img>
                 </div>
             </div>
         </div>
@@ -47,3 +46,14 @@ const Bodycom1 = () => {
 }
 
 export default Bodycom1;
+
+// <div className='w-[100%] overflow-x-hidden h-full lg:h-[100vh] flex flex-col slider banner'>
+// <div className='lg:mx-24'>
+//     <div className='flex flex-col items-center justify-center lg:flex lg:flex-row lg:items-center lg:justify-center lg:gap-10 mt-10' >
+//         <div className='w-full col-span-2 flex items-start justify-start lg:text-[6rem] text-[2rem] font-bold  '>
+//             <h1 id="heading" className="lg:text-[8vw] text-[8vh] p-4 tracking-tighter leading-none">Discover a world of narratives waiting to be explored.</h1>
+//         </div>
+//         <img src="https://cdn.prod.website-files.com/64c73d04a946980a4476537e/64d452de6c35e014ada74a73_Runner.svg" id="image" className="lg:w-[40vw]" alt="bg"></img>
+//     </div>
+// </div>
+// </div>

@@ -30,7 +30,7 @@ const PostRow = () => {
   }
 
   return (
-    <div className='h-[420px] w-full my-5'>
+    <div className='w-full my-5'>
       <div className='flex overflow-x-scroll gap-10 p-5'>
         {
           famousPost && famousPost.slice(9,18).map((item) => {
