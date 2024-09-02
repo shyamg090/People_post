@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react'
-import PostRowCard from './PostRowCard';
+import PostRowCard from './WapsCard';
 
 import { MdDeliveryDining } from "react-icons/md";
 import { FaCross, FaLeaf, FaSlack } from "react-icons/fa6";

@@ -11,7 +11,7 @@ const AboutContent = () => {
 
     useGSAP(() => {
         gsap.from("#text", {
-            transform : "translateX(-20%)" ,
+            transform : "translateX(20%)" ,
             duration: 1,
             scrollTrigger: {
                 trigger: ".box",
@@ -27,14 +27,15 @@ const AboutContent = () => {
 
 
     return (
-        <div className="h-[100vh] box">
-            <h1 className="text-[12vw] lg:text-[7vw]  text-center">Whats StoryStream</h1>
-            <div className="grid grid-col-1 lg:grid-cols-3 grid-rows-none place-items-center ">
-                <h1 id="text" className='h-full text-[8vw] col-span-2 lg:text-[2vw] text-justify p-10 border-r-[.5rem] border-r-black rounded-r-xl'>
+        <div className="lg:h-[100vh] box">
+            <h1 className="text-[8vw] lg:text-[7vw]  text-center">Whats StoryStream</h1>
+            <div className="grid grid-col-1 lg:grid-cols-3 grid-rows-none place-items-center mt-10 ">
+            <img src="https://cdn.prod.website-files.com/64c73d04a946980a4476537e/64d45542c7f9c0552d0ea237_Growth.svg" id="image" className="lg:w-[30vw] w-[50vw] col-span-2 lg:col-span-1" alt="bg"></img>
+
+                <h1 id="text" className='h-full text-[4vw] col-span-2 lg:text-[2vw] text-justify p-10 border-l-[.5rem] border-l-black rounded-l-xl'>
                     {words + words2}
                 </h1>
 
-                <img src="https://cdn.prod.website-files.com/64c73d04a946980a4476537e/64d45542c7f9c0552d0ea237_Growth.svg" id="image" className="lg:w-[30vw] " alt="bg"></img>
             </div>
         </div>
 

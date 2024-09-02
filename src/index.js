@@ -6,7 +6,6 @@ import App from './components/App'
 import About from './components/pages/About'
 import Contact from './components/pages/Contact';
 import Error from './components/pages/Error';
-import Bodycom from './components/bodycom/Bodycom';
 import Post from './components/pages/Post';
 import Body from './components/bodycom/Body';
 import UserClass from './components/pages/UserClass';

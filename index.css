@@ -13,7 +13,6 @@
 
 body {
   @apply bg-[#e9e4de]  text-black font-[SUSE] overflow-x-hidden;
-  /* @apply font-[Bodoni Moda SC] */
 }
 
 .not-rendered{
@@ -23,42 +22,4 @@ body {
   align-items: center;
   justify-content: center;
 }
-/* 
-font-
-
-h1, h2, h3, h4, h5, h6 {
-  @apply font-heading text-yellow;
-}
-
-h2 {
-  @apply font-subheading text-darkGreen;
-}
-
-ul, ol {
-  @apply font-points;
-}
-
-p {
-  @apply font-paragraph;
-}
-
-.header, .footer {
-  @apply bg-brown text-cream;
-}
-
-.button-primary {
-  @apply bg-yellow text-darkBrown;
-}
-
-.button-secondary {
-  @apply bg-brown text-cream;
-}
-
-a {
-  @apply text-darkGreen;
-}
-
-a:hover, a:active {
-  @apply text-darkBrown;
-} */
 
