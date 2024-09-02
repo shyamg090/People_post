@@ -13,7 +13,7 @@ const ScrollTag = () => {
     useGSAP(()=>{
 
         gsap.to('#scroll-parent h1', {
-            transform : "translateX(-65%)",
+            transform : "translateX(-75%)",
             scrollTrigger : {
                 trigger : "#scroll-parent",
                 scroller : "body",
@@ -27,8 +27,8 @@ const ScrollTag = () => {
     },[])
 
   return (
-    <div className='lg:h-[100vh] flex  items-center justify-start overflow-x-hidden overflow-y-hidden ' id='scroll-parent'>
-        <h1 className=' flex flex-col items-center justify-center text-center lg:text-[40vw] text-[50vw] leading-none tracking-tight uppercase p-2'>Stories..</h1>
+    <div className='lg:h-[100vh] hidden lg:flex  items-center justify-start overflow-x-hidden overflow-y-hidden ' id='scroll-parent'>
+        <h1 className=' flex flex-col items-center justify-center text-center lg:text-[40vw] text-[50vw] leading-none tracking-tight uppercase p-2'>Stories.Unfold</h1>
     </div>
   )
 }

@@ -32,12 +32,12 @@ const Header = () => {
   else {
   return (
 
-      <div className='w-full flex justify-center items-center h-[15vh] '>
+      <div className='w-full flex justify-center items-center lg:h-[15vh] '>
         <div className='hidden lg:flex' >
           <ul className='flex justify-between p-2 cursor-pointer'>
 
             {navbar.map((item, id)=>{
-                  return <li className='mx-4 px-4 flex items-center justify-center' key={id} ><Link to='/' > {item} </Link></li>
+                  return <li className='text-[1.5vw] mx-4 px-4 flex items-center justify-center' key={id} ><Link to='/' > {item} </Link></li>
             })}
 
           </ul>

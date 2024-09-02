@@ -8,20 +8,20 @@ const Bodycom = () => {
   
   return (
 
-    <div className=''>
+    <div className='flex flex-col items-center justify-center'>
 
-      <div className='lg:mx-32 flex flex-col items-start justify-center '>
-        <div className='flex items-center justify-center lg:text-[3rem] text-[2rem] font-bold '>
-          <h1>Some Posts to get inspired</h1>
+        <div className='text-[8vw] leading-none tracking-tight p-2 lg:text-[2vw] '>
+          <h1>Some Posts to get inspired  lorem222
+          Some Posts to get inspired  lorem222Some Posts to get inspired  lorem222Some Posts to get inspired  lorem222Some Posts to get inspired  lorem222Some Posts to get inspired  lorem222Some Posts to get inspired  lorem222Some Posts to get inspired  lorem222Some Posts to get inspired  lorem222Some Posts to get inspired  lorem222Some Posts to get inspired  lorem222Some Posts to get inspired  lorem222Some Posts to get inspired  lorem222Some Posts to get inspired  lorem222Some Posts to get inspired  lorem222Some Posts to get inspired  lorem222Some Posts to get inspired  lorem222Some Posts to get inspired  lorem222Some Posts to get inspired  lorem222Some Posts to get inspired  lorem222Some Posts to get inspired  lorem222Some Posts to get inspired  lorem222Some Posts to get inspired  lorem222Some Posts to get inspired  lorem222Some Posts to get inspired  lorem222Some Posts to get inspired  lorem222Some Posts to get inspired  lorem222Some Posts to get inspired  lorem222Some Posts to get inspired  lorem222Some Posts to get inspired  lorem222Some Posts to get inspired  lorem222Some Posts to get inspired  lorem222Some Posts to get inspired  lorem222Some Posts to get inspired  lorem222Some Posts to get inspired  lorem222Some Posts to get inspired  lorem222Some Posts to get inspired  lorem222Some Posts to get inspired  lorem222Some Posts to get inspired  lorem222Some Posts to get inspired  lorem222Some Posts to get inspired  lorem222Some Posts to get inspired  lorem222Some Posts to get inspired  lorem222Some Posts to get inspired  lorem222Some Posts to get inspired  lorem222Some Posts to get inspired  lorem222Some Posts to get inspired  lorem222Some Posts to get inspired  lorem222Some Posts to get inspired  lorem222Some Posts to get inspired  lorem222Some Posts to get inspired  lorem222Some Posts to get inspired  lorem222Some Posts to get inspired  lorem222Some Posts to get inspired  lorem222Some Posts to get inspired  lorem222Some Posts to get inspired  lorem222Some Posts to get inspired  lorem222Some Posts to get inspired  lorem222Some Posts to get inspired  lorem222Some Posts to get inspired  lorem222Some Posts to get inspired  lorem222Some Posts to get inspired  lorem222Some Posts to get inspired  lorem222Some Posts to get inspired  lorem222Some Posts to get inspired  lorem222Some Posts to get inspired  lorem222Some Posts to get inspired  lorem222Some Posts to get inspired  lorem222Some Posts to get inspired  lorem222Some Posts to get inspired  lorem222Some Posts to get inspired  lorem222Some Posts to get inspired  lorem222Some Posts to get inspired  lorem222Some Posts to get inspired  lorem222Some Posts to get inspired  lorem222Some Posts to get inspired  lorem222Some Posts to get inspired  lorem222Some Posts to get inspired  lorem222Some Posts to get inspired  lorem222Some Posts to get inspired  lorem222Some Posts to get inspired  lorem222Some Posts to get inspired  lorem222Some Posts to get inspired  lorem222Some Posts to get inspired  lorem222Some Posts to get inspired  lorem222Some Posts to get inspired  lorem222Some Posts to get inspired  lorem222Some Posts to get inspired  lorem222Some Posts to get inspired  lorem222Some Posts to get inspired  lorem222Some Posts to get inspired  lorem222Some Posts to get inspired  lorem222Some Posts to get inspired  lorem222Some Posts to get inspired  lorem222Some Posts to get inspired  lorem222
+          </h1>
         </div>
         <PostRow />
-      </div>
 
-      <div className='flex flex-col items-start justify-center '>
-        <div className='w-full flex items-center justify-center lg:text-[3rem] text-[2rem] font-bold '>
+      <div className=''>
+        <div className=''>
           <h1>Discover Some Good Posts</h1>
         </div>
-        <Allposts />
+        {/* <Allposts /> */}
       </div>
       {/*  */}
     </div>
