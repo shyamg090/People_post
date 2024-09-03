@@ -27,7 +27,7 @@ const AboutContent = () => {
 
 
     return (
-        <div className="lg:h-[100vh] box">
+        <div className="lg:h-[100vh] box overflow-x-hidden">
             <h1 className="text-[8vw] lg:text-[7vw]  text-center">Whats StoryStream</h1>
             <div className="grid grid-col-1 lg:grid-cols-3 grid-rows-none place-items-center mt-10 ">
             <img src="https://cdn.prod.website-files.com/64c73d04a946980a4476537e/64d45542c7f9c0552d0ea237_Growth.svg" id="image" className="lg:w-[30vw] w-[50vw] col-span-2 lg:col-span-1" alt="bg"></img>

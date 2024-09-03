@@ -5,7 +5,7 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 gsap.registerPlugin(ScrollTrigger);
 
-const Bodycom1 = () => {
+const Banner = () => {
 
     useGSAP(()=>{
         gsap.from('#heading', {
@@ -45,7 +45,7 @@ const Bodycom1 = () => {
     )
 }
 
-export default Bodycom1;
+export default Banner;
 
 // <div className='w-[100%] overflow-x-hidden h-full lg:h-[100vh] flex flex-col slider banner'>
 // <div className='lg:mx-24'>
