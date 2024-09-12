@@ -1,6 +1,16 @@
 import { createContext, useEffect, useState } from "react";
 export const ContextData = createContext();
 
+//images
+import history from "../components/assets/history.jpg"
+import crime from "../components/assets/crime.webp"
+import fiction from "../components/assets/fiction.webp"
+import mystery from "../components/assets/mystery.webp"
+import nostalgia from "../components/assets/nostalgia.jpg"
+import adventure from "../components/assets/adventure.jpg"
+import hope from "../components/assets/hope.webp"
+
+
 const Context = ({children}) => {
 
     const [posts, setPosts] = useState([]);
@@ -36,7 +46,7 @@ const Context = ({children}) => {
   // console.log(endTag);
 
   return (
-    <ContextData.Provider value={{posts , setPosts, filteredposts, setFilteredPosts, endTag, setEndTag,users, setUser}}>
+    <ContextData.Provider value={{posts , setPosts, filteredposts, setFilteredPosts, endTag, setEndTag,users, setUser, history,crime, fiction,mystery, nostalgia, adventure, hope }}>
         {children}
     </ContextData.Provider>
   )

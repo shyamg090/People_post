@@ -4,7 +4,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import App from './components/App'
 import About from './components/pages/About'
-import Contact from './components/pages/Contact';
+import Categories from './components/pages/Categories';
 import Error from './components/pages/Error';
 import Post from './components/pages/Post';
 import Body from './components/bodycom/Body';
@@ -30,8 +30,8 @@ const appLayout = createBrowserRouter([
                 element : <About/>
             },
             {
-                path : '/contact',
-                element : <Contact/>
+                path : '/categories',
+                element : <Categories/>
             },{
                 path : '/post/:id',
                 element : <Post />

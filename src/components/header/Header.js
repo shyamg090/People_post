@@ -22,7 +22,8 @@ const Header = () => {
 
   const onlineStatus = useOnlineStatus();
 
-  const navbar = ['Home', 'Contact Us', 'About Us', 'Signin']
+  const navbar = ['Home', 'Categories', 'Posts', 'About Us', 'Bookmarks' ,'Signin']
+  const navbarRoutes = ['', 'categories', 'posts', 'aboutus', 'bookmarks' ,'signin']
 
   if(!onlineStatus){
     return (
@@ -37,7 +38,7 @@ const Header = () => {
           <ul className='flex justify-between p-2 cursor-pointer'>
 
             {navbar.map((item, id)=>{
-                  return <li className='text-[1.5vw] mx-4 px-4 flex items-center justify-center' key={id} ><Link to='/' > {item} </Link></li>
+                  return <li className='text-[1.5vw] mx-4 px-4 flex items-center justify-center' key={id} ><Link to={`/${navbarRoutes[id]}`} > {item} </Link></li>
             })}
 
           </ul>

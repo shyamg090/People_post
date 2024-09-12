@@ -8,7 +8,7 @@ const Error = () =>{
     return (
         <>
         <h1>
-            {err.statusText} && {err.status}
+            {err.statusText} OOPs seems there was a error {err.status}
         </h1>
         </>
     )

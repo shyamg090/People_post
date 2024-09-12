@@ -20,7 +20,7 @@ const WapsCard = ({ posts }) => {
   return (
     <Link to='/posts' className='card' >
       {/* style={{ background: `url(${bgimage[3]})` } } */}
-      <div className='h-[40vh] border-2 border-black text-center flex flex-col items-start justify-evenly gap-4 rounded-tr-xl lg:rounded-tr-[2vw] lg:rounded-bl-[2vw] lg:hover:scale-4 ' >
+      <div className='h-[40vh] border-2 border-black shadow-xl text-center flex flex-col items-start justify-evenly gap-4 rounded-tr-xl lg:rounded-tr-[2vw] lg:rounded-bl-[2vw] lg:hover:scale-4 bg-[#ffffff] ' >
         <h1 className='w-full text-[5vw] lg:text-[2vw] '>{posts?.title}..</h1>
         <h4 className='w-full flex gap-2 items-center justify-center'>
           {posts?.tags.map((item) => {

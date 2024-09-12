@@ -27,13 +27,13 @@ const Waps = () => {
                 What People are Sharing??
             </h1>
 
-            <div className="flex flex-wrap items-center justify-center p-4 gap-2">
+            {/* <div className="flex flex-wrap items-center justify-center p-4 gap-2">
                 {
                     filterTags.map((item, index) => {
                         return <span className="bg-black text-white p-3 rounded-lg text-[1.5vw] " key={index}>{item}</span>
                     })
                 }
-            </div>
+            </div> */}
 
             {posts?.length === 0 ? <ShimCard /> :
                 <div className="grid grid-cols-1 lg:grid-cols-3 grid-rows-none gap-8 p-4 mt-10">

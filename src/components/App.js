@@ -20,15 +20,10 @@ const App = () => {
 
   return (
       <div className='' id='page'>
-        {/* <div className='w-[2vw] h-[3.7vh] fixed top-0 left-0 bg-black rounded-full' id='follower' >
-
-        </div> */}
       <Header />
       <Outlet />
       <Footer />
       </div>
-  
-
   )
 }
 
