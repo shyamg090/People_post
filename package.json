@@ -2,9 +2,11 @@
   "name": "wefood",
   "version": "1.0.0",
   "description": "this is a food ordering website",
+  "source": "index.html",
   "scripts": {
     "test": "jest",
-    "start": "npx parcel index.html"
+    "start": "parcel",
+    "build": "parcel build --dist-dir public"
   },
   "repository": {
     "type": "git",
